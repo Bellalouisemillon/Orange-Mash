@@ -4,10 +4,6 @@ body {
   margin: 0px;
 }
 
-div {
-  min-height: 60vh;
-  width: 200vh;
-}
 
 .white {
   background-color: #FFFFFF;
@@ -45,8 +41,17 @@ p {
 
 
 .mycontainer {
-  max-width: 960px;
+  max-width: 700px;
   margin: 0 auto;
+  min-height: calc(100vh - 56px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.title, .subtitle {
+  margin-bottom: 50px;
 }
 
 .photos {
