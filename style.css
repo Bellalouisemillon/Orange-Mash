@@ -27,7 +27,7 @@ header p, h2 {
 
 body {
   color: #D90368;
-  font-family:arial;
+  font-family: Courier New, monospace;
   margin: 0px;
 }
 
@@ -43,6 +43,10 @@ body {
 
 .padding-top {
   padding-top: 50px;
+}
+
+.padding-bottom {
+  padding-bottom: 50px
 }
 
 h1, h2 {
@@ -69,40 +73,34 @@ p {
   width: 100vw;
   height: 100vh;
   display: flex;
+
   align-items: center;
   justify-content: center;
 }
 
 .mycontainer {
-  max-width: 700px;
+  max-width: 900px;
   margin: 0 auto;
   min-height: calc(100vh - 56px);
-  display: flex;
-  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-content: space-around;
   justify-content: center;
-  flex-direction: column;
 }
 
 .title, .subtitle {
   margin-bottom: 50px;
 }
 
-.photos {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  align-content: stretch;
-  padding: 0;
-  max-width: 980px;
-}
-
 .photos img {
-  display: block;
-  float: left;
-  flex: 0 0 auto;
+  padding: 5px;
+  width: 250px;
+  height: 150px;
+  object-fit: cover;
 }
 
+
+}
 
 @media screen and (min-width: 1024px) {
   .photos img {
@@ -138,7 +136,26 @@ p {
     height: 100%;
   }
 }
-.carousel
-{
-    padding:10px 70px;
+
+.typewriter h1 {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation:
+    typing 3.5s steps(30, end),
+    blinking-cursor .5s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blinking-cursor {
+  from, to { border-color: transparent }
+  50% { border-color: orange; }
 }
