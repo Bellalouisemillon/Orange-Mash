@@ -159,3 +159,29 @@ p {
   from, to { border-color: transparent }
   50% { border-color: orange; }
 }
+
+.reviewphotos {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding-top: 40px;
+	padding-bottom: 40px;
+	align-content: space-around;
+
+}
+
+.reviewphotos img {
+	width: 50%;
+}
+
+.reviewcontainer {
+	max-width: 85%;
+	margin: 0 auto;
+	min-height: calc(100vh - 56px);
+	align-content: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	flex-direction: column;
+	padding-bottom: 50px
+
+}
